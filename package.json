@@ -1,0 +1,30 @@
+{
+  "name": "emoji-search",
+  "version": "1.0.0",
+  "description": "A tiny React app to search for emoji.",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dentednerd/emoji-search.git"
+  },
+  "author": "Jo Imlay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dentednerd/emoji-search/issues"
+  },
+  "homepage": "https://github.com/dentednerd/emoji-search#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "prop-types": "^15.5.10",
+    "react-scripts": "^1.0.7"
+  }
+}
