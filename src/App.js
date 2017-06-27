@@ -1,17 +1,28 @@
 import React from 'react';
-
-
+import Header from './Header';
+import SearchBar from './SearchBar';
+import EmojiResults from './EmojiResults';
+import filterEmoji from './filterEmoji';
 
 class App extends React.Component {
-    render () {
+    constructor(props) {
+        super(props);
+        this.state = {
+            searchTerm: ""
+        };
+        this.updateSearchTerm = this.updateSearchTerm.bind(this);
+    }
+
+        render () {
         return (
             <div>
-                <h1>Emoji Search</h1>
-                <form action="">
-                    <textarea></textarea>
-                    <button type='submit'>Search</button>
-                </form>
-                <p>emoji</p>
+                <Header />
+                <SearchBar
+                    searchTerm={this.state.searchTerm} 
+                    updateSearchTerm={this.updateSearchTerm} 
+                />
+                <EmojiResults 
+                    emojis={filterEmoji(this.state.searchTerm)}/>
                 
                 
                 {/*<Header />
@@ -23,6 +34,11 @@ class App extends React.Component {
                 />*/}
             </div>
         );
+    }
+    updateSearchTerm (newTerm) {
+        this.setState({
+            searchTerm: newTerm
+        })
     }
 }
 
